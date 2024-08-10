@@ -6,7 +6,9 @@ class Floresta:
         self.floresta.append(Heap(paciente))
     
     def adicionar(self, paciente):
-        pass
+        self.floresta.append(Heap(paciente))
+        self.floresta.sort(key= lambda heap : heap.grau)
+
 
     def unir_florestas(self, floresta):
         pass
