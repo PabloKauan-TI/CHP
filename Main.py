@@ -1,4 +1,6 @@
 from classes.Consultorio import Consultorio
+from classes.Floresta import Floresta
+from classes.Paciente import Paciente
 
 
 def Main():
@@ -28,7 +30,28 @@ def Main():
 
         match S:
             case 1:
-                print("case 1")
+                print("\nInforme as informações do seu paciente:")
+                nome = input("Nome: ")
+                sintomas = input("Sintomas: ")
+                prioridade = int(input("Número do Protocolo: "))
+                prioritario = bool(input("Seu paciente é de acesso prioritário: "))
+                consultorio = int(input("Qual o consultorio do Protocolo: "))
+
+                paciente = Paciente(nome, prioridade, prioritario, sintomas, consultorio)
+
+                central[consultorio-1].adicionar_paciente(paciente)
+
+
+            case 2:
+                print("case 2")
+            case 3:
+                print("case 3")
+            case 4:
+                print("case 4")
+            case 5:
+                print("case 5")
+            case 6:
+                print("case 6")
 
 
 if __name__ == "__main__":
