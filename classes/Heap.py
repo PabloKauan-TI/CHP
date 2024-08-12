@@ -5,12 +5,3 @@ class Heap:
         self.filho = []
         self.grau = 0
         self.prioridade = paciente.prioridade
-    
-    def checar_disposicao(self):
-        return
-    
-    def adicionar(self, hp):
-        return
-    
-    def atender(self):
-        return
