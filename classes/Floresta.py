@@ -52,3 +52,10 @@ class Floresta:
         self.floresta.pop(paciente)
         if len(filhos) > 0:
             self.unir(filhos)
+
+    def imprimirPacientes(self, consultorio):
+        print(f"Consultorio [{consultorio.id}]:", end=" ")
+        for i in self.floresta:
+            print(i.paciente, end=", ")
+        print()  # Para nova linha após imprimir todos os pacientes
+    

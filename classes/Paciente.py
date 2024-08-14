@@ -5,3 +5,7 @@ class Paciente:
         self.prioritario = prioritario
         self.sintomas = sintomas
         self.consultorio = int(consultorio)
+
+        def __str__(self):
+            return f"Nome: {self.nome}, Prioridade: {self.prioridade}, Prioritário: {self.prioritario}, Sintomas: {self.sintomas}"
+    

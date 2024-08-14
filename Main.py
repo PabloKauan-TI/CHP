@@ -45,9 +45,12 @@ def Main():
                 consultorio = int(input("Qual o consultorio: "))
                 central[consultorio-1].atender()
             case 3:
-                print("case 3")
+                atendePaciente = int(input("Digite o consultorio que irá atender o paciente: "))
+                enviaPaciente = int(input("Digite o consultorio que irá enviar o paciente para o atendimento:"))
+                central[atendePaciente - 1].atender_outro_consultorio(central[enviaPaciente - 1])
             case 4:
-                print("case 4")
+                for consultorio in central:
+                    consultorio.imprimir()
             case 5:
                 print("case 5")
             case 6:
