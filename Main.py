@@ -41,9 +41,9 @@ def Main():
 
                 central[consultorio-1].adicionar_paciente(paciente)
 
-
             case 2:
-                print("case 2")
+                consultorio = int(input("Qual o consultorio: "))
+                central[consultorio-1].atender()
             case 3:
                 print("case 3")
             case 4:

@@ -14,11 +14,12 @@ class Floresta:
                 if self.floresta[a].grau == self.floresta[x].grau and self.floresta[x].grau != self.floresta[y].grau:
                     self.unir_caso(a, x)
                 a+=1
-            self.unir_caso(a, x)
+            if self.floresta[a].grau == self.floresta[x].grau:
+                self.unir_caso(a, x)
+            self.floresta.sort(key= lambda heap : heap.grau)
         else:
             for heap in floresta:
                 self.floresta.append(heap)
-            self.floresta.sort(key= lambda heap: heap.grau)
             self.unir()
 
     def unir_caso(self, x, y):
@@ -38,5 +39,16 @@ class Floresta:
         self.floresta.sort(key= lambda heap : heap.grau)
         self.unir()
 
+    def procurar(self):
+        heap_aux = 0
+        for i in range(len(self.floresta)):
+            if self.floresta[heap_aux].prioridade > self.floresta[i].prioridade:
+                heap_aux = i
+        return heap_aux
+
     def atender(self):
-        pass    
+        paciente = self.procurar()
+        filhos = self.floresta[paciente].filho
+        self.floresta.pop(paciente)
+        if len(filhos) > 0:
+            self.unir(filhos)

@@ -23,8 +23,8 @@ class Consultorio:
     def atender_outro_consultorio(x):
         pass
 
-    def atender_prioritario(self):
-        pass
-
     def atender(self):
-        pass
+        if len(self.filas[0].floresta) == 0:
+            self.filas[1].atender()
+        else:
+            self.filas[0].atender()
