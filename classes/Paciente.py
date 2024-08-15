@@ -6,6 +6,9 @@ class Paciente:
         self.sintomas = sintomas
         self.consultorio = int(consultorio)
 
-        def __str__(self):
-            return f"Nome: {self.nome}, Prioridade: {self.prioridade}, Prioritário: {self.prioritario}, Sintomas: {self.sintomas}"
+    def __str__(self):
+            if self.prioritario == True:
+                return f" {self.nome} P"  
+            else:
+                return f"{self.nome} NP"
     

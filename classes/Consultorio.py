@@ -20,21 +20,14 @@ class Consultorio:
     def fechar_consultorio(self):
         pass
 
-    def atender_outro_consultorio(x):
-        if outroConsultorio.filas[0] is not None and len(outroConsultorio.filas[0].floresta) > 0:
-            outroConsultorio.filas[0].atender()
-        elif outroConsultorio.filas[1] is not None and len(outroConsultorio.filas[1].floresta) > 0:
-            outroConsultorio.filas[1].atender()
-
-
     def atender(self):
-        if len(self.filas[0].floresta) == 0:
-            self.filas[1].atender()
+        if len(self.filas[0].floresta) == None:
+            return self.filas[1].atender()
         else:
-            self.filas[0].atender()
+            return self.filas[0].atender()
     
 
-        def imprimir(self):
+    def imprimir(self):
             for fila in self.filas:
                 if fila is not None:
                     fila.imprimirPacientes(self)

@@ -1,5 +1,5 @@
 from classes.Consultorio import Consultorio
-from classes.Floresta import Floresta
+
 from classes.Paciente import Paciente
 
 
@@ -12,6 +12,9 @@ def Main():
     central.append(consultorio1)
     central.append(consultorio2)
     central.append(consultorio3)
+
+    with open("formato.txt", "W") as file:
+        file.write("")
 
     S = 0
     while S != 7:
@@ -46,8 +49,12 @@ def Main():
                 central[consultorio-1].atender()
             case 3:
                 atendePaciente = int(input("Digite o consultorio que irá atender o paciente: "))
-                enviaPaciente = int(input("Digite o consultorio que irá enviar o paciente para o atendimento:"))
-                central[atendePaciente - 1].atender_outro_consultorio(central[enviaPaciente - 1])
+                enviaPaciente = int(input("Digite o consultorio que irá enviar o paciente para o atendimento: "))
+                paciente = central[enviaPaciente-1].atender()
+
+                with open("formato.txt", "a") as file:
+                    file.write(f"\n{atendePaciente}" + paciente  + f" {enviaPaciente}")
+                
             case 4:
                 for consultorio in central:
                     consultorio.imprimir()

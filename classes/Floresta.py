@@ -47,11 +47,17 @@ class Floresta:
         return heap_aux
 
     def atender(self):
-        paciente = self.procurar()
-        filhos = self.floresta[paciente].filho
-        self.floresta.pop(paciente)
+        id = self.procurar()
+        paciente = self.floresta[id]
+        filhos = self.floresta[id].filho
+        self.floresta.pop(id)
         if len(filhos) > 0:
             self.unir(filhos)
+        if paciente.prioridade is not True:
+            return paciente.paciente.__str__()
+        else:
+            return paciente.paciente.__str__()
+            
 
     def imprimirPacientes(self, consultorio):
         print(f"Consultorio [{consultorio.id}]:", end=" ")
