@@ -13,8 +13,8 @@ def Main():
     central.append(consultorio2)
     central.append(consultorio3)
 
-    with open("formato.txt", "W") as file:
-        file.write("")
+    with open("formato.txt", "w") as file:
+        file.write("-----------Central Hospitalar Iniciando Atividades-----------\n\tABRT C 1\n\tABRT C 2\n\tABRT C 3\n")
 
     S = 0
     while S != 7:
@@ -47,17 +47,19 @@ def Main():
             case 2:
                 consultorio = int(input("Qual o consultorio: "))
                 central[consultorio-1].atender()
+
             case 3:
                 atendePaciente = int(input("Digite o consultorio que irá atender o paciente: "))
                 enviaPaciente = int(input("Digite o consultorio que irá enviar o paciente para o atendimento: "))
                 paciente = central[enviaPaciente-1].atender()
 
                 with open("formato.txt", "a") as file:
-                    file.write(f"\n{atendePaciente}" + paciente  + f" {enviaPaciente}")
+                    file.write(f"{atendePaciente}" + paciente  + f" {enviaPaciente}\n")
                 
             case 4:
                 for consultorio in central:
                     consultorio.imprimir()
+
             case 5:
                 print("case 5")
             case 6:
