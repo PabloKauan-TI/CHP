@@ -45,7 +45,7 @@ def Main():
                 central[consultorio-1].adicionar_paciente(paciente)
 
                 with open("formato.txt", "a") as file:
-                    file.write(f"TRD: {paciente.nome}"  + f" C{enviaPaciente} {paciente.prioritario}\n")
+                    file.write(f"TRD: {paciente.nome}"  + f" C{consultorio} {paciente.prioritario}\n")
 
             case 2:
                 consultorio = int(input("Qual o consultorio: "))

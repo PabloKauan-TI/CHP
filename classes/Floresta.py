@@ -58,7 +58,6 @@ class Floresta:
         else:
             return paciente.paciente.__str__()
             
-
     def imprimirPacientes(self, consultorio):
         print(f"Consultorio [{consultorio.id}]:", end=" ")
         for i in self.floresta:

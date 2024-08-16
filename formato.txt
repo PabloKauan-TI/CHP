@@ -1,1 +1,6 @@
-1 2 P 2
+-----------Central Hospitalar Iniciando Atividades-----------
+ABRT C 1
+ABRT C 2
+ABRT C 3
+TRD: 1 C1 True
+TRD: 2 C1 True
