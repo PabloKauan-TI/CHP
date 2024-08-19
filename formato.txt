@@ -9,6 +9,3 @@ TRD: 4 C1 True
 TRD: 5 C1 True
 TRD: 6 C1 True
 TRD: 7 C1 True
-TRD: 8 C1 True
-TRD: 9 C1 True
-TRD: 10 C1 True

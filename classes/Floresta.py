@@ -8,12 +8,16 @@ class Floresta:
     def unir(self, floresta = None):
         if floresta == None:
             a = 0
-            x = a+1
-            y = a+2
+            x = 1
+            y = 2
             try:
-                while self.floresta[a].grau == self.floresta[x].grau and self.floresta[x].grau != self.floresta[y].grau:
-                    self.unir_caso(a, x)
-                    
+                while y <= len(self.floresta)-1:
+                    while self.floresta[a].grau == self.floresta[x].grau and self.floresta[x].grau != self.floresta[y].grau:
+                        self.unir_caso(a, x)
+                    if self.floresta[x].grau == self.floresta[y].grau or self.floresta[a].grau != self.floresta[x].grau:
+                        a+=1
+                        x+=1
+                        y+=1
             except IndexError:
                 pass
             if self.floresta[a].grau == self.floresta[x].grau:
