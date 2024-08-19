@@ -10,16 +10,18 @@ class Floresta:
             a = 0
             x = a+1
             y = a+2
-            while y <= (len(self.floresta)-1):
-                if self.floresta[a].grau == self.floresta[x].grau and self.floresta[x].grau != self.floresta[y].grau:
+            try:
+                while self.floresta[a].grau == self.floresta[x].grau and self.floresta[x].grau != self.floresta[y].grau:
                     self.unir_caso(a, x)
-                a+=1
+                    
+            except IndexError:
+                pass
             if self.floresta[a].grau == self.floresta[x].grau:
                 self.unir_caso(a, x)
-            self.floresta.sort(key= lambda heap : heap.grau)
         else:
             for heap in floresta:
                 self.floresta.append(heap)
+            self.floresta.sort(key= lambda heap : heap.grau)
             self.unir()
 
     def unir_caso(self, x, y):
@@ -64,3 +66,9 @@ class Floresta:
             print(i.paciente, end=", ")
         print()  # Para nova linha após imprimir todos os pacientes
     
+    def somatorio(self):
+        pessoas = 0
+        for heap in self.floresta:
+            pessoas += 2**heap.grau
+        
+        return pessoas

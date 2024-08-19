@@ -6,12 +6,10 @@ from classes.Paciente import Paciente
 def Main():
     #Inicializando o sistema com no mínimo três consultorios
     central = []
-    consultorio1 = Consultorio(1)
-    consultorio2 = Consultorio(2)
-    consultorio3 = Consultorio(3)
-    central.append(consultorio1)
-    central.append(consultorio2)
-    central.append(consultorio3)
+    for i in range(2):
+        if len(central) == 0:
+            central.append(Consultorio(1))
+        central.append(Consultorio(len(central)+1))
 
     with open("formato.txt", "w") as file:
         file.write("-----------Central Hospitalar Iniciando Atividades-----------\nABRT C 1\nABRT C 2\nABRT C 3\n")
@@ -67,9 +65,13 @@ def Main():
                     consultorio.imprimir()
 
             case 5:
-                print("case 5")
+                central.append(Consultorio(len(central)+1))
+
+                with open("formato.txt", "w") as file:
+                    file.write(f"ABRT: C{len(central)+1}\n")
+
             case 6:
-                print("case 6")
+                print(central[0].tamanho())
 
 
 if __name__ == "__main__":
