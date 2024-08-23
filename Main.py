@@ -16,6 +16,9 @@ def Main():
 
     S = 0
     while S != 7:
+        print("\n$-------------------Status---------------------$")
+        for consultorio in central:
+            consultorio.imprimir()
         print("\n")
         print("$-------------------CHP---------------------$")
         print("| 1) Cadastrar Paciente                     |")
