@@ -27,7 +27,7 @@ class Consultorio:
 
 
     def atender(self):
-        if len(self.filas[0].floresta) == None:
+        if len(self.filas[0].floresta) == None or len(self.filas[0].floresta) == 0:
             return self.filas[1].atender()
         else:
             return self.filas[0].atender()

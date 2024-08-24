@@ -10,5 +10,5 @@ class Paciente:
             if self.prioritario == True:
                 return f" {self.nome} (P)"  
             else:
-                return f"{self.nome} (NP)"
+                return f" {self.nome} (NP)"
     

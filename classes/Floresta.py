@@ -47,7 +47,7 @@ class Floresta:
 
     def procurar(self):
         heap_aux = 0
-        for i in range(len(self.floresta)):
+        for i in range(len(self.floresta)-1):
             if self.floresta[heap_aux].prioridade > self.floresta[i].prioridade:
                 heap_aux = i
         return heap_aux
