@@ -68,7 +68,7 @@ class Floresta:
         print(f"Consultorio {consultorio.id}:", end=" ")
         for i in self.floresta:
             print(i.paciente, end=" ")
-        print()  # Para nova linha após imprimir todos os pacientes
+        print() 
     
     def somatorio(self):
         pessoas = 0

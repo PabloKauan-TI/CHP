@@ -4,4 +4,6 @@ ABRT C 2
 ABRT C 3
 TRD: 1 C1 True
 TRD: 2 C2 True
-TRD: Pablo C3 False
+FCH: C2
+ATD: C1 1 (P)
+ATD: C1 2 (P)

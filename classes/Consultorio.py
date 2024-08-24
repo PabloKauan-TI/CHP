@@ -5,6 +5,7 @@ class Consultorio:
         self.id = id
         self.filas = [ None, None]
     
+
     def adicionar_paciente(self, paciente):
         if paciente.prioritario:
             if self.filas[0] == None:
@@ -17,8 +18,13 @@ class Consultorio:
             else:
                 self.filas[1].adicionar(paciente)
 
-    def fechar_consultorio(self):
-        pass
+
+    def fechar_consultorio(self, consultorio):
+        if self.filas[0] is not None:
+            consultorio.filas[0].unir(self.filas[0].floresta)
+        if self.filas[1] is not None:
+            consultorio.filas[1].unir(self.filas[1].floresta)
+
 
     def atender(self):
         if len(self.filas[0].floresta) == None:
@@ -28,9 +34,13 @@ class Consultorio:
     
 
     def imprimir(self):
-            for fila in self.filas:
-                if fila is not None:
-                    fila.imprimirPacientes(self)
+            if self.filas[0] is not None or self.filas[1] is not None:
+                for fila in self.filas:
+                    if fila is not None:
+                        fila.imprimirPacientes(self)
+            else:
+                print(f"Consultorio {self.id}:")
+
 
     def tamanho(self):
             if self.filas[0] is not None and self.filas[1] is not None:
