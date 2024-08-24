@@ -3,28 +3,11 @@ ABRT C 1
 ABRT C 2
 ABRT C 3
 TRD: 1 C1 True
-TRD: 2 C1 True
-TRD: 3 C1 False
-TRD: 4 C1 False
+TRD: 2 C1 False
+ATD: C1 1 (P)
+ATD: C1 2 (NP)
+TRD: 1 C1 True
+TRD: 2 C2 True
+FCH: C2
 ATD: C1 1 (P)
 ATD: C1 2 (P)
-ATD: C13 (NP)
-ATD: C14 (NP)
-TRD: 5 C1 True
-TRD: 4 C1 True
-TRD: 3 C1 True
-TRD: 2 C1 True
-TRD: 1 C1 True
-TRD: 1 C1 True
-TRD: 1 C1 True
-TRD: 1 C1 True
-TRD: 1 C1 True
-ATD: C1 1 (P)
-ATD: C1 1 (P)
-ATD: C1 1 (P)
-ATD: C1 1 (P)
-ATD: C1 1 (P)
-ATD: C1 2 (P)
-ATD: C1 3 (P)
-ATD: C1 4 (P)
-ATD: C1 5 (P)
