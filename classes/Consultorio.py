@@ -33,12 +33,12 @@ class Consultorio:
                     fila.imprimirPacientes(self)
 
     def tamanho(self):
-        if self.filas[0] is not None and self.filas[1] is not None:
-            return self.filas[0].somatorio() + self.filas[1].somatorio()  
-        elif self.filas[0] is not None:
-            return self.filas[0].somatorio()
-        elif self.filas[1] is not None:
-            return self.filas[1].somatorio()
-        
-        return 0
+            if self.filas[0] is not None and self.filas[1] is not None:
+                return self.filas[0].somatorio() + self.filas[1].somatorio()  
+            elif self.filas[0] is not None:
+                return self.filas[0].somatorio()
+            elif self.filas[1] is not None:
+                return self.filas[1].somatorio()
+            
+            return 0
         

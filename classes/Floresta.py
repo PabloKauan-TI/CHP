@@ -18,10 +18,10 @@ class Floresta:
                         a+=1
                         x+=1
                         y+=1
+                if self.floresta[a].grau == self.floresta[x].grau:
+                    self.unir_caso(a, x)
             except IndexError:
                 pass
-            if self.floresta[a].grau == self.floresta[x].grau:
-                self.unir_caso(a, x)
         else:
             for heap in floresta:
                 self.floresta.append(heap)
@@ -65,9 +65,9 @@ class Floresta:
             return paciente.paciente.__str__()
             
     def imprimirPacientes(self, consultorio):
-        print(f"Consultorio [{consultorio.id}]:", end=" ")
+        print(f"Consultorio {consultorio.id}:", end=" ")
         for i in self.floresta:
-            print(i.paciente, end=", ")
+            print(i.paciente, end=" ")
         print()  # Para nova linha após imprimir todos os pacientes
     
     def somatorio(self):

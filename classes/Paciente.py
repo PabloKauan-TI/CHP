@@ -8,7 +8,7 @@ class Paciente:
 
     def __str__(self):
             if self.prioritario == True:
-                return f" {self.nome} P"  
+                return f" {self.nome} (P)"  
             else:
-                return f"{self.nome} NP"
+                return f"{self.nome} (NP)"
     

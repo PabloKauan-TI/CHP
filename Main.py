@@ -16,7 +16,8 @@ def Main():
 
     S = 0
     while S != 7:
-        print("\n$-------------------Status---------------------$")
+        print('\n')
+        print("$---------Próximos a serem Chamados---------$")
         for consultorio in central:
             consultorio.imprimir()
         print("\n")
@@ -65,7 +66,10 @@ def Main():
                 
             case 4:
                 for consultorio in central:
-                    consultorio.imprimir()
+                    id = consultorio.id
+                    pessoas = consultorio.tamanho()
+                    print("\n")
+                    print(f"Consultorio {id} há {pessoas} pacientes a serem atendidos.")
 
             case 5:
                 central.append(Consultorio(len(central)+1))
