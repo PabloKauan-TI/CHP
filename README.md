@@ -2,10 +2,10 @@
  *Trabalho de Estrutura de Dados Avançada
 
 ABRT = Abertura
-- Ex: ABRT C 2 - Informa a abertura do consultório número 02
+- Ex: ABRT C2 - Informa a abertura do consultório número 02
 
 TRD: Triagem
-- Ex: TRD: João C1 True - Informa que João foi atendido pelo consultório 01 e a terceira coluna é referente a se o paciente é ou não prioritário
+- Ex: TRD: João C1 True - Informa que João foi encaminhado para o consultório 01 e a terceira coluna é referente a se o paciente é ou não prioritário
 
 FCH: Informa o fechamento de um consultório.
 - Ex: FCH: C2 - Fechamneto do consultório 02
