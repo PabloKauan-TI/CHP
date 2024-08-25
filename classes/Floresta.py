@@ -5,8 +5,8 @@ class Floresta:
         self.floresta = []
         self.floresta.append(Heap(paciente))
     
-    def unir(self, floresta = None):
-        if floresta == None:
+    def unir(self, floresta2 = None):
+        if floresta2 == None:
             a = 0
             x = 1
             y = 2
@@ -23,8 +23,9 @@ class Floresta:
             except IndexError:
                 pass
         else:
-            for heap in floresta:
-                self.floresta.append(heap)
+
+            for heap in range(len(floresta2)-1):
+                self.floresta.append(floresta2[heap])
             self.floresta.sort(key= lambda heap : heap.grau)
             self.unir()
 
